@@ -10,7 +10,7 @@
     <div class="book-grid">
         <% booksByAuthor.forEach(books => { %> 
             <a href="/books/<%= books.id %>">
-                <img class="book-cover book-cover-large"  src="<%= books.coverImage %> " >
+                <img class="book-cover book-cover-large"  src="https://i.ytimg.com/vi/<%= books.bookUrl %>/maxresdefault.jpg" >
             </a>
         <% }) %>  
     </div>
