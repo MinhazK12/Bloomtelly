@@ -7,7 +7,7 @@ router.get('/', async(req, res)=>{
     const shorts = await Book.find({})
     let arr = []
     shorts.map((i)=>{
-        if (i.author == "63171e4d1d0a9ba743513dff") {
+        if (i.author == "631747031f05da63df63fdc8") {
             arr.push(i)
             // res.send(i)
         }
