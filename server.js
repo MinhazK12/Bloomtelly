@@ -11,6 +11,7 @@ const methodOverride = require('method-override')
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
 const bookRouter = require('./routes/books')
+const allShortsRoute = require('./routes/allshorts')
 
 
 app.set('view engine', 'ejs')
@@ -32,6 +33,7 @@ db.once('open', () => console.error("DB connected"))
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
 app.use('/books', bookRouter)
+app.use('/allshorts', allShortsRoute)
 
 
 app.listen(process.env.PORT || 3000)
