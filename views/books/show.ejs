@@ -1,0 +1,23 @@
+<h2 class="page-header"><%= book.title%></h2>
+<div class="book-details">
+    <div>
+        <img class="book-cover" src="https://i.ytimg.com/vi/<%= book.bookUrl %>/maxresdefault.jpg">
+        <div class="book-details-btn-grid">
+            <a class="btn btn-primary" href="/books/<%= book.id%>/edit" >Edit</a>
+            <form method="POST" action="/books/<%= book.id %>?_method=DELETE">
+                <button class="btn btn-danger" type="submit">DELETE</button>
+            </form>
+            <a class="btn btn-primary book-details-btn" href="/authors/<%= book.author.id%>" >View Playlist</a>
+        </div>
+    </div>
+    <div class="book-details-grid">
+        <div class="book-details-label">Playlist:</div>
+        <div class="details-field"><%= book.author.name %></div>
+        <div class="book-details-label">Video Link:</div>
+        <div class="details-field"><a href="https://youtu.be/<%= book.bookUrl %>">https://youtu.be/<%= book.bookUrl %></a></div>
+        <div class="book-details-label">Language:</div>
+        <div class="details-field"><%= book.language %></div>
+        <div class="book-details-label">Description:</div>
+        <div class="details-field"><%= book.description %></div>
+    </div>
+</div>

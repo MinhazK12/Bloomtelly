@@ -1,0 +1,17 @@
+<h2 class="page-header"><%= author.name %> </h2>
+<div class="btn-row form-row-end btn-row">
+    <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
+    <form method="POST" action="/authors/<%= author.id %>?_method=DELETE">
+        <button class="btn btn-danger" type="submit">DELETE</button>
+    </form>
+</div>
+<% if(booksByAuthor.length > 0) { %>
+    <h2>Videos by Playlist</h2>
+    <div class="book-grid">
+        <% booksByAuthor.forEach(books => { %> 
+            <a href="/books/<%= books.id %>">
+                <img class="book-cover book-cover-large"  src="<%= books.coverImage %> " >
+            </a>
+        <% }) %>  
+    </div>
+<% } %> 

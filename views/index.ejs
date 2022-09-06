@@ -1,1 +1,8 @@
-Middle
+<h2 class="page-header" style="font-family: 'IBM Plex Sans', sans-serif;" >Recently Added</h2>
+<div class="book-grid">
+    <% books.forEach(book => { %> 
+        <a href="/books/<%= book.id %>">
+            <img class="book-cover" src="https://i.ytimg.com/vi/<%= book.bookUrl %>/maxresdefault.jpg" >
+        </a>
+    <% }) %>  
+</div> 

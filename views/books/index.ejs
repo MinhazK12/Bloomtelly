@@ -1,0 +1,20 @@
+<h2 class="page-header">Search Video</h2>
+<form action="/books" method="get">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Title</label>
+            <input type="text" name = "name" value="<%= searchOptions.title %> " >  
+        </div>
+    </div>
+    <div class="btn-row form-row-end btn-row">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+<br>
+<div class="book-grid">
+    <% books.forEach(book => { %> 
+        <a href="/books/<%= book.id %> ">
+            <img class="book-cover" src="https://i.ytimg.com/vi/<%=book.bookUrl%>/maxresdefault.jpg" >
+        </a>
+    <% }) %>  
+</div>
