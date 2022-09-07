@@ -12,6 +12,7 @@ const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
 const bookRouter = require('./routes/books')
 const allShortsRoute = require('./routes/allshorts')
+const nrHindiRoute = require('./routes/nrhindi')
 
 
 app.set('view engine', 'ejs')
@@ -34,6 +35,7 @@ app.use('/', indexRouter)
 app.use('/authors', authorRouter)
 app.use('/books', bookRouter)
 app.use('/allshorts', allShortsRoute)
+app.use('/nrhindi', nrHindiRoute)
 
 
 app.listen(process.env.PORT || 3000)
