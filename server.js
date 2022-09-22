@@ -24,6 +24,7 @@ const premium = require('./routes/premium')
 const rohanrobothindi = require('./routes/rohanrobothindi')
 const tenalienglish = require('./routes/tenalienglish')
 const moralstory = require('./routes/moral')
+const allvideos = require('./routes/allvideos')
 
 
 app.set('view engine', 'ejs')
@@ -58,6 +59,7 @@ app.use('/premium', premium)
 app.use('/rohanrobothindi', rohanrobothindi)
 app.use('/tenalienglish', tenalienglish)
 app.use('/moralstory', moralstory)
+app.use('/allvideos', allvideos)
 // akbarenglish akbarhindi alien backbenchers horrorenglish nrenglish panchatantra premium rohanrobothindi tenalienglish
 
 
